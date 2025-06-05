@@ -1,0 +1,107 @@
+[
+  {
+    "ContainingType": "projeto_giga.UI.Controllers.AllocationController",
+    "Method": "AllocateChair",
+    "RelativePath": "api/Allocation/allocate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "projeto_giga.Application.DTOs.AllocateRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projeto_giga.UI.Controllers.AllocationController",
+    "Method": "GetAllocations",
+    "RelativePath": "api/Allocation/allocations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projeto_giga.UI.Controllers.DentistChairsController",
+    "Method": "Create",
+    "RelativePath": "api/DentistChairs/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "projeto_giga.Application.DTOs.DentistChairCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projeto_giga.UI.Controllers.DentistChairsController",
+    "Method": "DeleteChairDentist",
+    "RelativePath": "api/DentistChairs/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projeto_giga.UI.Controllers.DentistChairsController",
+    "Method": "GetAll",
+    "RelativePath": "api/DentistChairs/retrieve/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projeto_giga.UI.Controllers.DentistChairsController",
+    "Method": "GetById",
+    "RelativePath": "api/DentistChairs/retrieve/byid/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "projeto_giga.UI.Controllers.DentistChairsController",
+    "Method": "UpdateDentistChairById",
+    "RelativePath": "api/DentistChairs/update/chairdentistbyid/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "projeto_giga.Application.DTOs.DentistChairUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

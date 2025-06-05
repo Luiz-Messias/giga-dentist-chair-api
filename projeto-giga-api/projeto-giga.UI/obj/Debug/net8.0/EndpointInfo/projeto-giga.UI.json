@@ -1,0 +1,257 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Projeto Giga Consult API",
+    "description": "Projeto Giga Consult API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Allocation/allocate": {
+      "post": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Aloca automaticamente cadeiras odontológicas proporcionalmente com base nas regras.",
+        "requestBody": {
+          "description": "Regras de alocação.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllocateRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllocateRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AllocateRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Allocation/allocations": {
+      "get": {
+        "tags": [
+          "Allocation"
+        ],
+        "summary": "Retorna a lista de todas as alocações realizadas.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DentistChairs/retrieve/all": {
+      "get": {
+        "tags": [
+          "DentistChairs"
+        ],
+        "summary": "Retorna todas as cadeiras odontológicas cadastradas.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DentistChairs/retrieve/byid/{id}": {
+      "get": {
+        "tags": [
+          "DentistChairs"
+        ],
+        "summary": "Retorna uma cadeira odontológica específica pelo ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID da cadeira odontológica.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DentistChairs/create": {
+      "post": {
+        "tags": [
+          "DentistChairs"
+        ],
+        "summary": "Cria uma nova cadeira odontológica.",
+        "requestBody": {
+          "description": "Dados da cadeira a ser criada.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DentistChairCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DentistChairCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DentistChairCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DentistChairs/update/chairdentistbyid/{id}": {
+      "put": {
+        "tags": [
+          "DentistChairs"
+        ],
+        "summary": "Atualiza os dados de uma cadeira odontológica existente.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID da cadeira a ser atualizada.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Dados atualizados.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DentistChairUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DentistChairUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DentistChairUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DentistChairs/delete/{id}": {
+      "delete": {
+        "tags": [
+          "DentistChairs"
+        ],
+        "summary": "Remove uma cadeira odontológica pelo ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID da cadeira a ser removida.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AllocateRequestDto": {
+        "type": "object",
+        "properties": {
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DentistChairCreateDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DentistChairUpdateDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

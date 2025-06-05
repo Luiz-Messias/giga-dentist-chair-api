@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "projeto-giga.Application/1.0.0": {
+        "dependencies": {
+          "projeto-giga.Domain": "1.0.0"
+        },
+        "runtime": {
+          "projeto-giga.Application.dll": {}
+        }
+      },
+      "projeto-giga.Domain/1.0.0": {
+        "runtime": {
+          "projeto-giga.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "projeto-giga.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "projeto-giga.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

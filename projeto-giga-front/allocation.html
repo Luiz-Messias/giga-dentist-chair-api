@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alocação de Cadeiras</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Alocação de Cadeira Odontológica</h1>
+
+      <div id="allocation-form-section">
+        <form id="allocation-form" class="allocation-form-card">
+          <label for="startTime">Data e Hora Inicial</label>
+          <input type="datetime-local" id="startTime" required />
+
+          <label for="endTime">Data e Hora Final</label>
+          <input type="datetime-local" id="endTime" required />
+
+          <div class="allocation-buttons">
+            <button type="submit" class="btn-submit">Alocar</button>
+            <button type="button" id="btn-voltar" class="btn-cancel">
+              Voltar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <h2>Alocações Existentes</h2>
+      <div id="allocations-list" class="allocation-grid"></div>
+    </div>
+
+    <div id="toast-container" class="toast-container"></div>
+  </body>
+</html>
+
+<script type="module" src="allocation.js"></script>

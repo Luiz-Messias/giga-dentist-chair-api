@@ -1,0 +1,48 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadeiras Odontológicas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cadeiras Odontológicas</h1>
+      <button id="btn-nova" class="btn-nova">Nova Cadeira</button>
+
+      <button id="btn-alocar" class="btn-nova">Alocar Cadeira</button>
+
+      <template id="form-template">
+        <form id="chair-form" class="form-card">
+          <input type="hidden" id="chair-id" />
+          <input
+            type="number"
+            id="chair-number"
+            placeholder="Número da Cadeira"
+            required
+          />
+          <textarea id="chair-description" placeholder="Descrição"></textarea>
+
+          <label class="checkbox-label">
+            <input type="checkbox" id="chair-active" />
+            <span>Ativa</span>
+          </label>
+
+          <div class="form-buttons">
+            <button type="submit" class="btn-submit">Salvar</button>
+            <button type="button" id="cancel-button" class="btn-cancel">
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </template>
+
+      <div id="form-section" class="hidden"></div>
+      <div id="chairs-container" class="grid"></div>
+    </div>
+
+    <div id="toast-container" class="toast-container"></div>
+  </body>
+</html>
+
+<script type="module" src="script.js"></script>

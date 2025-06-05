@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>projeto-giga.UI</name>
+    </assembly>
+    <members>
+        <member name="M:projeto_giga.UI.Controllers.AllocationController.AllocateChair(projeto_giga.Application.DTOs.AllocateRequestDto)">
+            <summary>
+            Aloca automaticamente cadeiras odontológicas proporcionalmente com base nas regras.
+            </summary>
+            <param name="request">Regras de alocação.</param>
+        </member>
+        <member name="M:projeto_giga.UI.Controllers.AllocationController.GetAllocations">
+            <summary>
+            Retorna a lista de todas as alocações realizadas.
+            </summary>
+        </member>
+        <member name="M:projeto_giga.UI.Controllers.DentistChairsController.GetAll">
+            <summary>
+            Retorna todas as cadeiras odontológicas cadastradas.
+            </summary>
+        </member>
+        <member name="M:projeto_giga.UI.Controllers.DentistChairsController.GetById(System.Int32)">
+            <summary>
+            Retorna uma cadeira odontológica específica pelo ID.
+            </summary>
+            <param name="id">ID da cadeira odontológica.</param>
+        </member>
+        <member name="M:projeto_giga.UI.Controllers.DentistChairsController.Create(projeto_giga.Application.DTOs.DentistChairCreateDto)">
+            <summary>
+            Cria uma nova cadeira odontológica.
+            </summary>
+            <param name="dto">Dados da cadeira a ser criada.</param>
+        </member>
+        <member name="M:projeto_giga.UI.Controllers.DentistChairsController.UpdateDentistChairById(System.Int32,projeto_giga.Application.DTOs.DentistChairUpdateDto)">
+            <summary>
+            Atualiza os dados de uma cadeira odontológica existente.
+            </summary>
+            <param name="id">ID da cadeira a ser atualizada.</param>
+            <param name="dto">Dados atualizados.</param>
+        </member>
+        <member name="M:projeto_giga.UI.Controllers.DentistChairsController.DeleteChairDentist(System.Int32)">
+            <summary>
+            Remove uma cadeira odontológica pelo ID.
+            </summary>
+            <param name="id">ID da cadeira a ser removida.</param>
+        </member>
+    </members>
+</doc>
