@@ -42,7 +42,7 @@ O aplicativo deve permitir a criação, leitura, atualização e exclusão de ca
 
 - `Domain`: Interfaces e entidades
 - `Application`: Regras de negócio
-- `Infra`: Repositórios com ADO.NET
+- `Infra`: Repositórios
 - `API`: Controllers, Program.cs e configurações
 
 ---
